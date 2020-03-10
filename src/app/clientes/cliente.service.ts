@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class ClienteService {
-  private urlEndPoint: string = 'http://localhost:8080/api/clientes';
+  private urlEndPoint: string = 'http://localhost:8044/api/clientes';
 
   constructor(private http: HttpClient, private router: Router) { }
 
