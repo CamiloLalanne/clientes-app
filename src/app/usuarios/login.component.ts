@@ -25,6 +25,17 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
+    debugger;
+
+//guardando json en una variable
+let parseJ = JSON.parse('{"padre":[{"hijo-b":"hola","edad":14}, {"hijo":"chao", "edad":11}]}');
+//acceder a propiedad con caracter especial hijo-b mapeando
+let padre = parseJ.padre[0]["hijo-b"];
+console.log(padre);
+
+
+
+
     console.log(this.usuario);
     if (this.usuario.username == null || this.usuario.password == null) {
       swal('Error Login', 'Username o password vacías!', 'error');
