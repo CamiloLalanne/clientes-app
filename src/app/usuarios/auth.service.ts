@@ -34,7 +34,6 @@ export class AuthService {
   }
 
   login(usuario: Usuario): Observable<any> {
-    debugger;
     const urlEndpoint = 'http://localhost:8044/oauth/token';
 
     const credenciales = btoa('angularapp' + ':' + '12345');
@@ -43,6 +42,7 @@ export class AuthService {
       'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': 'Basic ' + credenciales
     });
+    debugger;
 
     let params = new URLSearchParams();
     params.set('grant_type', 'password');
